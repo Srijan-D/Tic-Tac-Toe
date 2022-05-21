@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+nav ul {
+  list-style-type: none; /* removes all the unnecessary before each ul like discs*/
+}
+nav {
+  background-color: black;
+  color: white;
+  height: 50px;
+  font-size: 35px;
+  /* padding-top: 10px; */
+  display: flex;
+  text-align: center;
+  align-items: center; /* wont work as display flex */
+  /* can write it in nav ul also */
+  font-family: "Pacifico", cursive;
+}
+.gameContainer {
+  
+  /* background-color: turquoise; */
+  display: flex;
+  margin-top: 20px;
+  /* margin: auto; not required as display flex is already doing that for us */
+  justify-content: center; /*Aligns flex items along the main axis of the current line of the flex container*/
+}
+
+.container {
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 11vw);
+  grid-template-rows: repeat(3, 11vw);
+  position: relative;
+}
+.box {
+  border: 2px black solid;
+  font-size: 7vw;
+  display: flex;
+  justify-content: center; /*So that Xs are in centre of the box*/
+  align-items: center;
+}
+.imgbox img {
+  width: 0;
+  transition: width 1s ease-in-out;
+  position: relative;
+  top: 90px;
+  right: 150px;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.box:hover {
+  background-color: rgb(152, 189, 236);
+  cursor: pointer;
+}
+.bt {
+  border-top: 0;
+}
+.bl {
+  border-left: 0;
+}
+.bb {
+  border-bottom: 0;
+}
+.br {
+  border-right: 0;
+}
+
+#reset {
+  border-radius:  100px;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  padding: 2px 10px;
+  font-weight: bold;
+  margin: 6px;
+  z-index: 1;
+}
+
+#reset:hover{
+  border: 3px solid cyan;
+}
+
+.info{
+  font-size: 40px;
+}
+
+@media screen and (max-width: 800px)
+{
+  .gameContainers{
+    flex-wrap: wrap;
+    margin-left: 10px;
+
+  }
+  .container {
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 18vw);
+    grid-template-rows: repeat(3, 18vw);
+    
+  }
+  nav{
+    font-size: 50px;
+  }
+  .info{
+    font-size: 50px;
+    
+    margin-right: 4px;
+  }
+ .Gameinfo{
+   margin: 5px;
+   
+ }
+ .imgbox img {
+  width: 0px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  top: 200px;
+  right: 250px;
+  
+}
+
+}
+/* .line{
+  width: 100%;
+  opacity: 0.55;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+} */
